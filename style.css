@@ -12,7 +12,8 @@ body {
     display: flex;
     justify-content: center; /* centers card */
     align-items: center; /* centers card */
-    min-height: 100vh; /* centers card */
+    height: 100vh; /* centers card */
+    width: 100vw;
     background-color: var(--light-grayish-blue);
 
 }
@@ -38,6 +39,16 @@ p {
     
 }
 
+.card-master {
+    /* display: flex;
+    flex-direction: column; */
+    position: absolute;
+    /* width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center; */
+}
+
 .img-container {
     display: flex;
     border-top-left-radius: 10px;
@@ -53,6 +64,7 @@ p {
 
 .container {
     display: flex;
+    width: 670px;
 }
 
 .topp {
@@ -121,6 +133,70 @@ height: 50px;
     display: flex;
 }
 
+#share-button {
+    border: 1px solid var(--light-grayish-blue);
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    
+}
+
+#share-button img {
+    width: 15px;
+    height: 15px;
+}
+
+
+/* Share Menu Styles */
+
+.share-menu-button {
+    display: none;
+}
+
+.share-menu {
+    background-color: #48556a;
+    height: 50px;
+    width: 230px;
+    color: #fff;
+    position: absolute;
+    bottom: 75px;
+    left: 517px;
+    display: none;
+    grid-template-columns: 1fr;
+    border-radius: 10px;
+}
+
+.share-menu.active {
+    display: grid;
+}
+
+.share-menu .social-media {
+    text-align: center;
+    align-content: center;
+}
+
+.share-menu .social-media span {
+    color: #6d7f97;
+    letter-spacing: 4px;
+}
+
+.share-menu .social-media i {
+    font-size: 16px;
+    padding: 0 5px;
+}
+
+.share-menu::before {
+    border-top: 15px solid #48556a;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    content: '';
+    position: absolute;
+    width: 0;
+    top: 49px;
+    left: 100px;
+}
+
 .attribution {
     display: none;
 }
@@ -154,6 +230,32 @@ height: 50px;
 
 .footer-2 {
     margin-top: 20px;
+}
+
+.share-menu {
+    height: 70px;
+    width: 320px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    grid-template-columns: 2fr 1fr;
+}
+
+.share-menu-button {
+    background-color: #6d7f97;
+    border-radius: 50%;
+    color: #edf2f8;
+    height: 30px;
+    width: 30px;
+    align-content: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 19px;
+    cursor: pointer;
+    display: block;
 }
 
 }
